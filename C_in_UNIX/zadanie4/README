@@ -1,0 +1,35 @@
+========================================================================
+Autor: Szymon Oleś,                               Wieliczka, 15.04.2021
+========================================================================
+Zawartosc:
+========================================================================
+Katalog zawiera 1 program(y) opisan(y/e) ponizej i plik makefile do kompilacji 
+------------------------------------------------------------------------
+
+1. program ktory tworzy podprogram i nienazwany potok pomiedzy nim i macierzystym
+program macierzysty czyta tresc pliku i przesyla ja do potoku. program potomny
+czyta dane z potoku i zapisuje je w oddzielnym pliku. pod koniec pliki sa porownywane
+
+-do poprawnego uruchomienia wymaga co najmniej 2 dodatkowych parametrow  (nazwa pliku1) (nazwa pliku2)
+
+main.c  - program glowny. 
+
+=======================================================================
+* Jak uruchomic programy:
+-----------------------------------------------------------------------
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszych programow, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby skompilowac i uruchomic 1-szy program, nalezy wykonac komende:
+       make run1
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+

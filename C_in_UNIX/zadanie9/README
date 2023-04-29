@@ -1,0 +1,35 @@
+========================================================================
+Autor: Szymon Oleś,                               Wieliczka, 30.05.2021
+========================================================================
+Zawartosc:
+========================================================================
+Katalog zawiera 2 program(y) opisan(y/e) ponizej, plik makefile do kompilacji 
+oraz dodatkowe pliki:
+------------------------------------------------------------------------
+program jest implementacja problemu wzajemnego wykluczania za pomoca watkow i mutexow
+------------------------------------------------------------------------
+
+1. program glowny tworzy kilka watkow ktore wykluczajac sie pobieraja 
+i modyfikuja wartosc globalnej zmiennej
+main.c  - program glowny. 
+
+
+=======================================================================
+* Jak uruchomic programy:
+-----------------------------------------------------------------------
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszych programow, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby skompilowac i uruchomic program, nalezy wykonac komende:
+       make run
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+

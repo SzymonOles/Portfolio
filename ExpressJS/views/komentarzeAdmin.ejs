@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<%- include('head') -%>
+
+<body>
+<%- include('header') -%>
+<%- include('nav') -%>
+
+<article>
+  <h1>Sekcja komentarzy</h1>
+
+  <table id="tabela">
+
+    <% data.forEach((row) => { %>
+      <tr>
+        <td><%= row.username %></td>
+        <td><%= row.comment %></td>
+          <td>
+              <a href = "admin/del/<%= row.id %>">
+                <button>Usuń</button>
+              </a>
+          </td>
+      </tr>
+    <% }); %>
+
+  </table>
+</article>
+
+<%- include('foot') -%>
+</body>
+</html>
+
+
+

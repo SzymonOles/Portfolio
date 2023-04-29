@@ -1,0 +1,41 @@
+========================================================================
+Autor: Szymon Oleś,                               Wieliczka, 18.05.2021
+========================================================================
+Zawartosc:
+========================================================================
+Katalog zawiera program(y) opisan(y/e) ponizej, plik makefile do kompilacji 
+oraz dodatkowe pliki: 1.txt 2.txt
+------------------------------------------------------------------------
+program jest implementacja problemu konsumenta i producenta z bufoem cyklicznym
+------------------------------------------------------------------------
+
+1. tworzy pamiec dzielona, semafory, uruchamia procesy potomne konsumenta i
+producenta ktore pobieraja i odczytuja dane z 
+main.c  - program glowny. 
+producent.c - program zalezny
+konsument.c - program zalezny
+pamiec.c/h - pliki biblioteczne
+semafory.c/h  - pliki biblioteczne
+
+=======================================================================
+* Jak uruchomic programy:
+-----------------------------------------------------------------------
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszych programow, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby skompilowac i uruchomic 1-szy program, nalezy wykonac komende:
+       make run
+       make runs - biblioteka statyczna
+       make rund1 - biblioteka dynamiczna 1
+       make rund2 - biblioteka dynamiczna 2
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+

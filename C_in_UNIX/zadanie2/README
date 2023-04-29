@@ -1,0 +1,48 @@
+========================================================================
+Autor: Szymon Oleś,                               Wieliczka, 24.03.2021
+========================================================================
+
+* Zawartosc:
+============
+
+Katalog zadanie2 zawiera 2 programy opisane ponizej i plik makefile do kompilacji 
+--------------------------------------------------------------------
+
+1. program wywolujacy funkcje fork trzy razy w petli i uruchamiajacy program prog za pomoca funkcji exec.
+!!! do poprawnego uruchomienia wymaga co najmniej 1 dodatkowego parametru
+b.c  - program glowny. 
+
+2.program wypisujacy identyfikatory uid ugid pid ppid pgid
+prog.c  - program glowny. 
+
+
+pytanie - Ile procesow powstanie przy n-krotnym wywolaniu funkcji fork-exec i dlaczego?
+odpowiedz - n dodatkowych (ogolnie n+1 wliczajac pierwotny) gdyz kazde uzycie fork-exec
+inicjuje dodatkowy proces na podstawie wskazanago programu.
+------------------------------------------------------------------------
+
+* Jak uruchomic programy:
+=========================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszych programow, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby skompilowac i uruchomic 2-gi program, nalezy wykonac komende:
+       make run2
+
+-> Aby skompilowac i uruchomic 1-szy program, nalezy wykonac komende:
+       make run1
+
+-> Aby poprawnie uruchomic 1-szy program, nalezy wykonac poprzednie komendy oraz komende:
+       ./b.x prog.x
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+

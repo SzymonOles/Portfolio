@@ -1,0 +1,74 @@
+========================================================================
+Autor: Szymon Oleś,                               Wieliczka, 21.03.2021
+========================================================================
+
+* Zawartosc:
+============
+
+Katalog zadanie1 zawiera 5 programow opisanych ponizej plik makefile do kompilacji 
+i plik tekstowy drzewo genealogiczne do podpunktu d
+--------------------------------------------------------------------
+
+1. program wypisujacy identyfikatory UID, GID, PID, PPID i PGID dla danego procesu.
+a.c  - program glowny. 
+
+2. program wywolujacy funkcje fork trzy razy w petli for i wypisujacy powyzsze identyfikatory dla procesu macierzystego
+oraz wszystkich procesow potomnych. Przy pomocy funkcji wait sprawa, aby proces macierzysty zaczekal na zakonczenie wszystkich procesow potomnych.
+b.c  - program glowny. 
+
+3. program wywolujacy funkcje fork trzy razy w petli for i wypisujacy powyzsze identyfikatory dla procesu macierzystego
+oraz wszystkich procesow potomnych. przy uzyciu funkcji sleep sprawia
+by procesy potomne byly adoptowane przez proces init lub systemd(u mnie byly adpotowane przez 882 czyli systemd)
+c.c  - program glowny.
+
+4. program wywolujacy funkcje fork trzy razy w petli for i wypisujacy powyzsze identyfikatory dla procesu macierzystego
+oraz wszystkich procesow potomnych. przy uzyciu funkcji sleep procesy pojawiaja sie na ekranie grupowane pokoleniami od
+najstarszego do najmlodszego, a proces macierzysty konczy sie dopiero po procesach potomnych.
+Na podstawie wynikow programu sporzadzilem plik tekstowy "drzewo genealogiczne" tworzonych procesow z zaznaczonymi
+identyfikatorami PID, PPID i PGID.
+d.c  - program glowny.
+drzewo genealogiczne.txt - drzewo procesow
+
+5. program wywolujacy funkcje fork trzy razy w petli for i wypisujacy powyzsze identyfikatory dla procesu macierzystego
+oraz wszystkich procesow potomnych. przy uzyciu fukcji setpgid sprawia by kazdy proces potomny
+stawal sie liderem swojej wlasnej grupy procesow.
+e.c  - program glowny.
+
+pytanie - Ile procesow powstanie przy n-krotnym wywolaniu funkcji fork i dlaczego?
+odpowiedz - 2^n-1 dodatkowych (ogolnie jest 2^n wliczajac pierwotny) gdyz kazde uzycie 
+funkcji fork dodaje do kazdego istniejacego procesu jeden dodatkowy czyli podwaja aktualna ilosc
+=> 1*2*2*2*.....*2 = 2^n
+     \--n-razy--/
+------------------------------------------------------------------------
+
+* Jak uruchomic programy:
+=========================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszych programow, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby uruchomic 1-szy program, nalezy wykonac komende:
+       make run1
+
+-> Aby uruchomic 2-gi program, nalezy wykonac komende:
+       make run2
+
+-> Aby uruchomic 3-ci program, nalezy wykonac komende:
+       make run3
+
+-> Aby uruchomic 4-ty program, nalezy wykonac komende:
+       make run4
+
+-> Aby uruchomic 5-ty program, nalezy wykonac komende:
+       make run5
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+

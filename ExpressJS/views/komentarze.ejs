@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<%- include('head') -%>
+
+<body>
+<%- include('header') -%>
+<%- include('nav') -%>
+
+<article>
+  <h1>Sekcja komentarzy</h1>
+
+  <h3>Dodaj komentarz</h3>
+  <form action="/komentarze/send" method="post">
+
+    <label for="name">Nazwa:</label><br>
+    <input type="text" id="name" name="name" placeholder="Imie"><br>
+
+    <label for="comment">Komentarz:</label><br>
+    <textarea rows="4" cols="50" id="comment" name="comment" placeholder="komentarz"></textarea><br>
+
+    <input type="submit" id="submit">
+
+  </form>
+
+  <table id="tabela">
+
+    <% data.forEach((row) => { %>
+      <tr>
+        <td><%= row.username %></td>
+        <td><%= row.comment %></td>
+      </tr>
+    <% }); %>
+
+  </table>
+</article>
+
+<%- include('foot') -%>
+</body>
+</html>
+
+
+

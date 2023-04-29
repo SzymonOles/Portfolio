@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<%- include('head') -%>
+
+<body>
+<%- include('header') -%>
+<%- include('nav') -%>
+
+<article>
+    <div id="container">
+      <% data.forEach((row) => { %>
+        <div>
+            <img src=<%= row.img %> alt="">
+            <h3><%= row.name %></h3>
+            <div><%= row.price %> zł</div>
+        </div>
+      <% }); %>
+    </div>
+</article>
+
+<%- include('foot') -%>
+</body>
+</html>
+
+
+

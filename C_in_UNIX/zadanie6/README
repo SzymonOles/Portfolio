@@ -1,0 +1,42 @@
+========================================================================
+Autor: Szymon Oleś,                               Wieliczka, 15.04.2021
+========================================================================
+Zawartosc:
+========================================================================
+Katalog zawiera 3 program(y) opisan(y/e) ponizej, plik makefile do kompilacji 
+oraz dodatkowe pliki: plik1.txt plik2.txt
+------------------------------------------------------------------------
+program jest implementacja problemu konsumenta i producenta
+------------------------------------------------------------------------
+
+1. tworzy potok nazwany,glowny program tworzy 2 podprogramy ktore komunikuja sie przez potok
+main.c  - program glowny. 
+producent.c - program zalezny
+konsument.c - program zalezny
+
+2. tworzy potok nazwany, tworzy 2 programy niezalezne ktore komunikuja sie przez potok
+producent.c - program glowny
+konsument.c - program glowny
+
+=======================================================================
+* Jak uruchomic programy:
+-----------------------------------------------------------------------
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszych programow, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby skompilowac i uruchomic 1-szy program, nalezy wykonac komende:
+       make run1
+
+-> Aby skompilowac i uruchomic 2-gi program, nalezy wykonac komende:
+       make run2
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+

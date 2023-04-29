@@ -1,0 +1,62 @@
+========================================================================
+Autor: Szymon Oleś,                               Wieliczka, 24.03.2021
+========================================================================
+
+* Zawartosc:
+============
+
+Katalog zadanie2 zawiera 4 programy opisane ponizej i plik makefile do kompilacji 
+--------------------------------------------------------------------
+
+1. program ktory wykonuje obsluge sygnalu
+!!! do poprawnego uruchomienia wymaga co najmniej 2 dodatkowych parametrow  (tryb obslugi) (numer sygnalu)
+zada.c  - program glowny. 
+
+2.program otwierajacy program 1 jako potomny i wysylajacy mu sygnal
+!!! do poprawnego uruchomienia wymaga co najmniej 2 dodatkowych parametrow  (tryb obslugi) (numer sygnalu)
+zadb.c  - program glowny. 
+
+3.program uruchamiajacy program potomny(zadc2) i wysylajacy sygnal do grupy procesow tego programu
+!!! do poprawnego uruchomienia wymaga co najmniej 2 dodatkowych parametrow  (tryb obslugi) (numer sygnalu)
+zadc.c  - program glowny. 
+-program ustawia ignorowanie sygnalu ustala siebie liderem grupy uruchamia 3 programy potomne (program 1) 
+i czeka na ich zakonczenie 
+zadc2.c  - program potomny. 
+
+
+------------------------------------------------------------------------
+
+* Jak uruchomic programy:
+=========================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszych programow, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby skompilowac i uruchomic 1-szy program, nalezy wykonac komende:
+       make run1
+
+-> Aby uruchomic 1-szy program z wlasnymi argumentami, nalezy wykonac komende:
+       ./zada.x obsluga numer
+
+-> Aby skompilowac i uruchomic 2-gi program, nalezy wykonac komende:
+       make run2
+
+-> Aby uruchomic 2-gi program z wlasnymi argumentami, nalezy wykonac komende:
+       ./zadb.x obsluga numer
+
+-> Aby skompilowac 3-ci i uruchomic program, nalezy wykonac komendy:
+       make run3
+
+-> Aby uruchomic 3-ci program z wlasnymi argumentami, nalezy wykonac komende:
+       ./zadc.x obsluga numer
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+

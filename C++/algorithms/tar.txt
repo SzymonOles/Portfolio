@@ -1,0 +1,1 @@
+tar -cvzf Lab02-Szymon-Oles.tar.gz *
